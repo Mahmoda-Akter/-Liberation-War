@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Photo Gallery - Liberation War Archive</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
@@ -23,95 +22,55 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="font-['Poppins'] bg-slate-50 text-slate-800">
+
     <!-- ================= Navbar Start ================= -->
-    <nav class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow z-50">
+    <nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between items-center h-20">
 
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center gap-2">
-
-                    <span class="material-symbols-outlined text-4xl text-green-800">
+                    <span class="material-symbols-outlined text-4xl text-blue-900">
                         account_balance
                     </span>
-
                     <div>
-                        <h2 class="font-bold text-xl text-green-900">
+                        <h2 class="font-bold text-xl text-slate-900">
                             Liberation War
                         </h2>
-
                         <p class="text-xs text-gray-500">
                             Digital Archive
                         </p>
                     </div>
-
                 </a>
 
                 <!-- Desktop Menu -->
                 <ul class="hidden lg:flex items-center gap-8 font-medium">
-
-                    <li>
-                        <a href="index.html" class="hover:text-green-700 duration-300">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="documents.html" class="hover:text-green-700 duration-300">
-                            Documents
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="interviews.html" class="hover:text-green-700 duration-300">
-                            Interviews
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="gallery.html" class="hover:text-green-700 duration-300">
-                            Gallery
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html" class="hover:text-green-700 duration-300">
-                            Contact
-                        </a>
-                    </li>
-
+                    <li><a href="index.html" class="hover:text-blue-800">Home</a></li>
+                    <li><a href="documents.html" class="hover:text-blue-800">Documents</a></li>
+                    <li><a href="interviews.html" class="hover:text-blue-800">Interviews</a></li>
+                    <li><a href="gallery.html" class="text-blue-800 font-semibold">Gallery</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-800">Contact</a></li>
                 </ul>
 
                 <!-- Mobile Button -->
                 <button id="menuBtn" class="lg:hidden">
-
-                    <span class="material-symbols-outlined text-4xl">
+                    <span class="material-symbols-outlined text-4xl text-slate-800">
                         menu
                     </span>
-
                 </button>
 
             </div>
 
             <!-- Mobile Menu -->
-
             <div id="mobileMenu" class="hidden lg:hidden pb-5">
-
                 <ul class="space-y-4 font-medium">
-
                     <li><a href="index.html">Home</a></li>
-
                     <li><a href="documents.html">Documents</a></li>
-
                     <li><a href="interviews.html">Interviews</a></li>
-
                     <li><a href="gallery.html">Gallery</a></li>
-
                     <li><a href="contact.html">Contact</a></li>
-
                 </ul>
-
             </div>
 
         </div>
@@ -119,372 +78,226 @@
 
     <!-- Space for Fixed Navbar -->
     <div class="h-20"></div>
-
     <!-- ================= Navbar End ================= -->
 
 
     <!-- ================= Hero Section ================= -->
-
-    <section class="relative py-28 bg-green-900 text-white">
-
+    <section class="bg-slate-900 py-24 text-white">
         <div class="max-w-7xl mx-auto px-6 text-center">
-
-            <h1 class="text-5xl font-bold">
-                Liberation War Photo Gallery
+            <h1 class="text-4xl md:text-5xl font-bold">
+                Archival Photo Gallery
             </h1>
-
-            <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-200 leading-8">
-                Explore historical photographs capturing the courage,
-                sacrifice, important places and unforgettable moments of
-                Bangladesh's Liberation War.
+            <p class="mt-6 max-w-3xl mx-auto text-base md:text-lg text-slate-300 leading-relaxed">
+                Visual records documenting key operations, strategic locations, and historic moments from the 1971
+                Bangladesh Liberation Struggle.
             </p>
-
         </div>
-
     </section>
+
 
     <!-- ================= Gallery Filter ================= -->
-
-    <section class="py-12 bg-gray-100">
-
+    <section class="py-10 bg-slate-100 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-6">
-
+            <!-- 3 Category Buttons -->
             <div class="flex flex-wrap justify-center gap-4">
-
-                <button class="filter-btn bg-green-700 text-white px-6 py-3 rounded-lg" data-filter="all">
+                <button class="filter-btn bg-blue-900 text-white px-6 py-2.5 rounded-lg text-sm font-medium"
+                    data-filter="all">
                     All
                 </button>
-
-                <button class="filter-btn border px-6 py-3 rounded-lg" data-filter="fighters">
-                    Freedom Fighters
+                <button
+                    class="filter-btn border border-slate-300 bg-white text-slate-700 px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50"
+                    data-filter="archives">
+                    Historic Archives
                 </button>
-
-                <button class="filter-btn border px-6 py-3 rounded-lg" data-filter="places">
-                    Historical Places
+                <button
+                    class="filter-btn border border-slate-300 bg-white text-slate-700 px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50"
+                    data-filter="fronts">
+                    War Fronts
                 </button>
-
-                <button class="filter-btn border px-6 py-3 rounded-lg" data-filter="events">
-                    Events
-                </button>
-
             </div>
-
         </div>
-
     </section>
 
+
     <!-- ================= Gallery ================= -->
-
-    <section class="pb-24">
-
+    <section class="py-16 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6">
-
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Image 1 -->
+                <div class="gallery-item archives group">
+                    <div class="relative overflow-hidden rounded-xl shadow-md border border-gray-200">
+                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80"
+                            class="w-full h-72 object-cover" alt="Declaration Manuscripts">
 
-                <div class="gallery-item fighters group">
-
-                    <div class="relative overflow-hidden rounded-xl shadow-lg">
-
-                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
-                            class="w-full h-72 object-cover group-hover:scale-110 duration-500">
-
+                        <!-- Hover Overlay with Zoom & Download -->
                         <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center gap-4">
-
-                            <button class="bg-white text-black px-4 py-2 rounded zoom-btn">
+                            class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4">
+                            <button class="bg-white text-slate-900 px-4 py-2 rounded font-medium text-sm zoom-btn">
                                 Zoom
                             </button>
-
-                            <a href="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80"
-                                download class="bg-green-700 text-white px-4 py-2 rounded">
-
+                            <a href="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=80"
+                                download class="bg-blue-900 text-white px-4 py-2 rounded font-medium text-sm">
                                 Download
-
                             </a>
-
                         </div>
-
                     </div>
-
-                    <h3 class="text-xl font-semibold mt-4">
-                        Freedom Fighters
+                    <h3 class="text-xl font-bold mt-4 text-slate-800">
+                        Declaration Manuscripts
                     </h3>
-
                 </div>
 
                 <!-- Image 2 -->
+                <div class="gallery-item fronts group">
+                    <div class="relative overflow-hidden rounded-xl shadow-md border border-gray-200">
+                        <img src="https://images.unsplash.com/photo-1510936150000-01c900e233c4?auto=format&fit=crop&w=900&q=80"
+                            class="w-full h-72 object-cover" alt="Sector 1 Headquarters">
 
-                <div class="gallery-item places group">
-
-                    <div class="relative overflow-hidden rounded-xl shadow-lg">
-
-                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80"
-                            class="w-full h-72 object-cover group-hover:scale-110 duration-500">
-
+                        <!-- Hover Overlay with Zoom & Download -->
                         <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center gap-4">
-
-                            <button class="bg-white px-4 py-2 rounded zoom-btn">
-
+                            class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4">
+                            <button class="bg-white text-slate-900 px-4 py-2 rounded font-medium text-sm zoom-btn">
                                 Zoom
-
                             </button>
-
-                            <a href="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80"
-                                download class="bg-green-700 text-white px-4 py-2 rounded">
-
+                            <a href="https://images.unsplash.com/photo-1510936150000-01c900e233c4?auto=format&fit=crop&w=1600&q=80"
+                                download class="bg-blue-900 text-white px-4 py-2 rounded font-medium text-sm">
                                 Download
-
                             </a>
-
                         </div>
-
                     </div>
-
-                    <h3 class="text-xl font-semibold mt-4">
-                        Historical Places
+                    <h3 class="text-xl font-bold mt-4 text-slate-800">
+                        Sector 1 Headquarters
                     </h3>
-
                 </div>
 
                 <!-- Image 3 -->
+                <div class="gallery-item archives group">
+                    <div class="relative overflow-hidden rounded-xl shadow-md border border-gray-200">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80"
+                            class="w-full h-72 object-cover" alt="Foreign Press Bulletins">
 
-                <div class="gallery-item events group">
-
-                    <div class="relative overflow-hidden rounded-xl shadow-lg">
-
-                        <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80"
-                            class="w-full h-72 object-cover group-hover:scale-110 duration-500">
-
+                        <!-- Hover Overlay with Zoom & Download -->
                         <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center gap-4">
-
-                            <button class="bg-white px-4 py-2 rounded zoom-btn">
-
+                            class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4">
+                            <button class="bg-white text-slate-900 px-4 py-2 rounded font-medium text-sm zoom-btn">
                                 Zoom
-
                             </button>
-
-                            <a href="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1600&q=80"
-                                download class="bg-green-700 text-white px-4 py-2 rounded">
-
+                            <a href="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=80"
+                                download class="bg-blue-900 text-white px-4 py-2 rounded font-medium text-sm">
                                 Download
-
                             </a>
-
                         </div>
-
                     </div>
-
-                    <h3 class="text-xl font-semibold mt-4">
-                        Historic Events
+                    <h3 class="text-xl font-bold mt-4 text-slate-800">
+                        Foreign Press Bulletins
                     </h3>
-
                 </div>
 
                 <!-- Image 4 -->
+                <div class="gallery-item fronts group">
+                    <div class="relative overflow-hidden rounded-xl shadow-md border border-gray-200">
+                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=80"
+                            class="w-full h-72 object-cover" alt="Naval Command Routes">
 
-                <div class="gallery-item fighters group">
-
-                    <div class="relative overflow-hidden rounded-xl shadow-lg">
-
-                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80"
-                            class="w-full h-72 object-cover group-hover:scale-110 duration-500">
-
+                        <!-- Hover Overlay with Zoom & Download -->
                         <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 duration-300 flex items-center justify-center gap-4">
-
-                            <button class="bg-white px-4 py-2 rounded zoom-btn">
+                            class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4">
+                            <button class="bg-white text-slate-900 px-4 py-2 rounded font-medium text-sm zoom-btn">
                                 Zoom
                             </button>
-
-                            <a href="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80"
-                                download class="bg-green-700 text-white px-4 py-2 rounded">
+                            <a href="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1600&q=80"
+                                download class="bg-blue-900 text-white px-4 py-2 rounded font-medium text-sm">
                                 Download
                             </a>
-
                         </div>
-
                     </div>
-
-                    <h3 class="text-xl font-semibold mt-4">
-                        National Heroes
+                    <h3 class="text-xl font-bold mt-4 text-slate-800">
+                        Naval Command Routes
                     </h3>
-
                 </div>
 
-                <!-- আরও 8-12টি একই স্টাইলে Card যোগ করবে -->
-
             </div>
-
         </div>
-
     </section>
 
+
     <!-- ================= Lightbox ================= -->
-
-    <div id="lightbox" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50">
-
+    <div id="lightbox" class="fixed inset-0 bg-slate-950/90 hidden items-center justify-center z-50 p-4">
         <button id="closeLightbox" class="absolute top-6 right-8 text-white text-5xl">
-
             &times;
-
         </button>
-
         <img id="lightboxImage" class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl">
-
     </div>
 
+
     <!-- ================= Footer Start ================= -->
-
-    <footer class="bg-green-950 text-white mt-20">
-
+    <footer class="bg-slate-950 text-white">
         <div class="max-w-7xl mx-auto px-6 py-16">
-
             <div class="grid md:grid-cols-4 gap-10">
 
                 <!-- About -->
-
                 <div>
-
-                    <h2 class="text-2xl font-bold mb-4">
-                        Liberation War Archive
-                    </h2>
-
-                    <p class="text-gray-300 leading-7">
-                        Preserving the memories, documents,
-                        photographs and oral histories of
-                        Bangladesh's Liberation War for future
-                        generations.
-                    </p>
-
+                    <h2 class="text-2xl font-bold mb-4">Liberation War Archive</h2>
+                    <p class="text-gray-400 leading-7 text-sm">Preserving the memories, documents, photographs and oral
+                        histories of Bangladesh's Liberation War for future generations.</p>
                 </div>
 
                 <!-- Links -->
-
                 <div>
-
-                    <h3 class="font-semibold text-lg mb-5">
-                        Quick Links
-                    </h3>
-
-                    <ul class="space-y-3">
-
-                        <li><a href="index.html">Home</a></li>
-
-                        <li><a href="documents.html">Documents</a></li>
-
-                        <li><a href="interviews.html">Interviews</a></li>
-
-                        <li><a href="gallery.html">Gallery</a></li>
-
-                        <li><a href="contact.html">Contact</a></li>
-
+                    <h3 class="font-semibold text-lg mb-5">Quick Links</h3>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li><a href="index.html" class="hover:underline">Home</a></li>
+                        <li><a href="documents.html" class="hover:underline">Documents</a></li>
+                        <li><a href="interviews.html" class="hover:underline">Interviews</a></li>
+                        <li><a href="gallery.html" class="hover:underline">Gallery</a></li>
+                        <li><a href="contact.html" class="hover:underline">Contact</a></li>
                     </ul>
-
                 </div>
 
                 <!-- Contact -->
-
                 <div>
-
-                    <h3 class="font-semibold text-lg mb-5">
-                        Contact
-                    </h3>
-
-                    <div class="space-y-4">
-
-                        <div class="flex gap-3">
-
-                            <span class="material-symbols-outlined">
-                                location_on
-                            </span>
-
+                    <h3 class="font-semibold text-lg mb-5">Contact</h3>
+                    <div class="space-y-4 text-sm text-gray-300">
+                        <div class="flex gap-3 items-center">
+                            <span class="material-symbols-outlined text-amber-400">location_on</span>
                             Dhaka, Bangladesh
-
                         </div>
-
-                        <div class="flex gap-3">
-
-                            <span class="material-symbols-outlined">
-                                mail
-                            </span>
-
+                        <div class="flex gap-3 items-center">
+                            <span class="material-symbols-outlined text-amber-400">mail</span>
                             archive@gmail.com
-
                         </div>
-
-                        <div class="flex gap-3">
-
-                            <span class="material-symbols-outlined">
-                                call
-                            </span>
-
+                        <div class="flex gap-3 items-center">
+                            <span class="material-symbols-outlined text-amber-400">call</span>
                             +880 1234 567890
-
                         </div>
-
                     </div>
-
                 </div>
 
                 <!-- Social -->
-
                 <div>
-
-                    <h3 class="font-semibold text-lg mb-5">
-                        Follow Us
-                    </h3>
-
+                    <h3 class="font-semibold text-lg mb-5">Follow Us</h3>
                     <div class="flex gap-4">
-
-                        <a href="#">
-
-                            <span class="material-symbols-outlined">
-                                public
-                            </span>
-
-                        </a>
-
-                        <a href="#">
-
-                            <span class="material-symbols-outlined">
-                                photo_camera
-                            </span>
-
-                        </a>
-
-                        <a href="#">
-
-                            <span class="material-symbols-outlined">
-                                smart_display
-                            </span>
-
-                        </a>
-
+                        <a href="#" class="hover:text-amber-400"><span
+                                class="material-symbols-outlined">public</span></a>
+                        <a href="#" class="hover:text-amber-400"><span
+                                class="material-symbols-outlined">photo_camera</span></a>
+                        <a href="#" class="hover:text-amber-400"><span
+                                class="material-symbols-outlined">smart_display</span></a>
                     </div>
-
                 </div>
 
             </div>
 
-            <hr class="my-10 border-gray-700">
+            <hr class="my-10 border-slate-800">
 
-            <div class="text-center text-gray-400">
-
-                © 2026 Liberation War Archive.
-                All Rights Reserved.
-
+            <div class="text-center text-gray-500 text-sm">
+                © 2026 Liberation War Archive. All Rights Reserved.
             </div>
-
         </div>
-
     </footer>
-
     <!-- ================= Footer End ================= -->
-     <script src="js/script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

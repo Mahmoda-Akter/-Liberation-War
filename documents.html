@@ -4,114 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Historical Documents - Liberation War Archive</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Google Material Icons -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="font-['Poppins'] bg-slate-50 text-slate-800">
+
     <!-- ================= Navbar Start ================= -->
-    <nav class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow z-50">
+    <nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between items-center h-20">
 
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center gap-2">
-
-                    <span class="material-symbols-outlined text-4xl text-green-800">
+                    <span class="material-symbols-outlined text-4xl text-blue-900">
                         account_balance
                     </span>
-
                     <div>
-                        <h2 class="font-bold text-xl text-green-900">
+                        <h2 class="font-bold text-xl text-slate-900">
                             Liberation War
                         </h2>
-
                         <p class="text-xs text-gray-500">
                             Digital Archive
                         </p>
                     </div>
-
                 </a>
 
                 <!-- Desktop Menu -->
                 <ul class="hidden lg:flex items-center gap-8 font-medium">
-
-                    <li>
-                        <a href="index.html" class="hover:text-green-700 duration-300">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="documents.html" class="hover:text-green-700 duration-300">
-                            Documents
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="interviews.html" class="hover:text-green-700 duration-300">
-                            Interviews
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="gallery.html" class="hover:text-green-700 duration-300">
-                            Gallery
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html" class="hover:text-green-700 duration-300">
-                            Contact
-                        </a>
-                    </li>
-
+                    <li><a href="index.html" class="hover:text-blue-800">Home</a></li>
+                    <li><a href="documents.html" class="text-blue-800 font-semibold">Documents</a></li>
+                    <li><a href="interviews.html" class="hover:text-blue-800">Interviews</a></li>
+                    <li><a href="gallery.html" class="hover:text-blue-800">Gallery</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-800">Contact</a></li>
                 </ul>
 
                 <!-- Mobile Button -->
                 <button id="menuBtn" class="lg:hidden">
-
-                    <span class="material-symbols-outlined text-4xl">
+                    <span class="material-symbols-outlined text-4xl text-slate-800">
                         menu
                     </span>
-
                 </button>
 
             </div>
 
             <!-- Mobile Menu -->
-
             <div id="mobileMenu" class="hidden lg:hidden pb-5">
-
                 <ul class="space-y-4 font-medium">
-
                     <li><a href="index.html">Home</a></li>
-
                     <li><a href="documents.html">Documents</a></li>
-
                     <li><a href="interviews.html">Interviews</a></li>
-
                     <li><a href="gallery.html">Gallery</a></li>
-
                     <li><a href="contact.html">Contact</a></li>
-
                 </ul>
-
             </div>
 
         </div>
@@ -119,341 +76,168 @@
 
     <!-- Space for Fixed Navbar -->
     <div class="h-20"></div>
-
     <!-- ================= Navbar End ================= -->
-    <!-- ================= Hero ================= -->
 
-    <section class="bg-green-900 text-white py-24">
-        <div class="max-w-7xl mx-auto px-6 text-center">
 
-            <h1 class="text-5xl font-bold">
-                Historical Documents
+    <!-- ================= BASIC HERO SECTION ================= -->
+    <section class="bg-slate-900 text-white py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold tracking-wide">
+                Archive Documents & Records
             </h1>
-
-            <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-200">
-                Browse official declarations, government records,
-                agreements and historical documents related to
-                Bangladesh's Liberation War.
+            <p class="mt-4 text-slate-300 text-base md:text-lg leading-relaxed">
+                Explore historical documents, declarations, official letters, and treaties preserved from the 1971 Liberation War of Bangladesh.
             </p>
-
         </div>
     </section>
+    <!-- ================= HERO END ================= -->
 
-    <!-- ================= Search ================= -->
 
-    <section class="py-12 bg-gray-100">
-
+    <!-- ================= SEARCH SECTION ================= -->
+    <section class="py-8 bg-slate-200/60 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-6">
-
-            <div class="max-w-xl mx-auto relative">
-
-                <span class="material-symbols-outlined absolute left-4 top-4 text-gray-500">
-                    search
-                </span>
-
-                <input id="searchInput" type="text" placeholder="Search documents..."
-                    class="w-full pl-14 pr-5 py-4 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-700">
-
+            <div class="max-w-2xl mx-auto bg-white p-2 sm:p-3 rounded-2xl shadow-md border border-gray-200 flex flex-col sm:flex-row items-center gap-2">
+                <div class="flex items-center gap-3 w-full px-3 py-2">
+                    <span class="material-symbols-outlined text-blue-900 text-2xl">
+                        search
+                    </span>
+                    <input id="searchInput" type="text" placeholder="Search by title, date, or document type..."
+                        class="w-full text-gray-700 placeholder-gray-400 bg-transparent focus:outline-none text-sm sm:text-base">
+                </div>
+                <button class="w-full sm:w-auto bg-blue-900 hover:bg-blue-800 text-white font-medium px-6 py-2.5 rounded-xl shrink-0">
+                    Search
+                </button>
             </div>
-
         </div>
-
     </section>
+    <!-- ================= SEARCH END ================= -->
+
 
     <!-- ================= Categories ================= -->
-
-    <section class="py-10">
-
+    <section class="py-8">
         <div class="max-w-7xl mx-auto px-6">
-
-            <div class="flex flex-wrap gap-4 justify-center">
-
-                <button class="px-5 py-2 rounded-full bg-green-700 text-white">
-                    All
-                </button>
-
-                <button class="px-5 py-2 rounded-full border">
-                    Declarations
-                </button>
-
-                <button class="px-5 py-2 rounded-full border">
-                    Agreements
-                </button>
-
-                <button class="px-5 py-2 rounded-full border">
-                    Government Letters
-                </button>
-
-                <button class="px-5 py-2 rounded-full border">
-                    Reports
-                </button>
-
+            <div class="flex flex-wrap gap-3 justify-center">
+                <button class="px-5 py-2 rounded-full bg-blue-900 text-white text-sm font-medium">All</button>
+                <button class="px-5 py-2 rounded-full border hover:bg-slate-100 text-sm font-medium text-gray-700">Declarations</button>
+                <button class="px-5 py-2 rounded-full border hover:bg-slate-100 text-sm font-medium text-gray-700">Agreements</button>
+                <button class="px-5 py-2 rounded-full border hover:bg-slate-100 text-sm font-medium text-gray-700">Government Letters</button>
+                
             </div>
-
         </div>
-
     </section>
+
 
     <!-- ================= Documents Grid ================= -->
-
     <section class="pb-24">
-
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- Card -->
-
-            <div class="bg-white rounded-xl shadow hover:shadow-xl overflow-hidden">
-
-                <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80"
-                    class="h-56 w-full object-cover">
-
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1583521214690-73421a1829a9?auto=format&fit=crop&w=800&q=80"
+                    alt="Declaration" class="h-52 w-full object-cover">
                 <div class="p-6">
-
-                    <span class="text-sm text-green-700 font-semibold">
-                        Declaration
-                    </span>
-
-                    <h3 class="text-2xl font-bold mt-2">
-                        Declaration of Independence
-                    </h3>
-
-                    <p class="text-gray-500 mt-2">
-                        Published: 26 March 1971
-                    </p>
-
-                    <p class="text-gray-600 mt-4">
-                        Historic declaration marking the beginning
-                        of Bangladesh's struggle for independence.
-                    </p>
-
-                    <button class="mt-6 bg-green-700 text-white px-5 py-2 rounded-lg hover:bg-green-800">
-                        View Details
-                    </button>
-
+                    <span class="text-xs text-amber-900 font-semibold uppercase tracking-wider bg-amber-100 px-2.5 py-1 rounded-md">Declaration</span>
+                    <h3 class="text-xl font-bold mt-3 text-slate-800">Declaration of Independence</h3>
+                    <p class="text-gray-500 mt-1 text-sm">Published: 26 March 1971</p>
+                    <p class="text-gray-600 mt-3 text-sm leading-relaxed">Historic declaration marking the beginning of Bangladesh's struggle for independence.</p>
+                    <button class="mt-5 w-full bg-blue-900 text-white py-2.5 rounded-lg hover:bg-blue-800 font-medium text-sm">View Details</button>
                 </div>
-
             </div>
 
-            <!-- Card -->
-
-            <div class="bg-white rounded-xl shadow hover:shadow-xl overflow-hidden">
-
-                <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80"
-                    class="h-56 w-full object-cover">
-
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+                    alt="Agreement" class="h-52 w-full object-cover">
                 <div class="p-6">
-
-                    <span class="text-sm text-blue-700 font-semibold">
-                        Agreement
-                    </span>
-
-                    <h3 class="text-2xl font-bold mt-2">
-                        International Recognition
-                    </h3>
-
-                    <p class="text-gray-500 mt-2">
-                        Published: December 1971
-                    </p>
-
-                    <p class="text-gray-600 mt-4">
-                        Official records documenting recognition
-                        of Bangladesh by foreign governments.
-                    </p>
-
-                    <button class="mt-6 bg-green-700 text-white px-5 py-2 rounded-lg hover:bg-green-800">
-                        View Details
-                    </button>
-
+                    <span class="text-xs text-indigo-900 font-semibold uppercase tracking-wider bg-indigo-100 px-2.5 py-1 rounded-md">Agreement</span>
+                    <h3 class="text-xl font-bold mt-3 text-slate-800">International Recognition</h3>
+                    <p class="text-gray-500 mt-1 text-sm">Published: December 1971</p>
+                    <p class="text-gray-600 mt-3 text-sm leading-relaxed">Official records documenting recognition of Bangladesh by foreign governments.</p>
+                    <button class="mt-5 w-full bg-blue-900 text-white py-2.5 rounded-lg hover:bg-blue-800 font-medium text-sm">View Details</button>
                 </div>
-
             </div>
 
-            <!-- Card -->
-
-            <div class="bg-white rounded-xl shadow hover:shadow-xl overflow-hidden">
-
-                <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=900&q=80"
-                    class="h-56 w-full object-cover">
-
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?auto=format&fit=crop&w=800&q=80"
+                    alt="Government Letter" class="h-52 w-full object-cover">
                 <div class="p-6">
-
-                    <span class="text-sm text-red-700 font-semibold">
-                        Government Letter
-                    </span>
-
-                    <h3 class="text-2xl font-bold mt-2">
-                        Official Correspondence
-                    </h3>
-
-                    <p class="text-gray-500 mt-2">
-                        Published: 1971
-                    </p>
-
-                    <p class="text-gray-600 mt-4">
-                        Government communication preserved
-                        for historical research.
-                    </p>
-
-                    <button class="mt-6 bg-green-700 text-white px-5 py-2 rounded-lg hover:bg-green-800">
-                        View Details
-                    </button>
-
+                    <span class="text-xs text-rose-900 font-semibold uppercase tracking-wider bg-rose-100 px-2.5 py-1 rounded-md">Government Letter</span>
+                    <h3 class="text-xl font-bold mt-3 text-slate-800">Official Correspondence</h3>
+                    <p class="text-gray-500 mt-1 text-sm">Published: 1971</p>
+                    <p class="text-gray-600 mt-3 text-sm leading-relaxed">Government communication preserved for historical research and archiving.</p>
+                    <button class="mt-5 w-full bg-blue-900 text-white py-2.5 rounded-lg hover:bg-blue-800 font-medium text-sm">View Details</button>
                 </div>
-
             </div>
 
         </div>
-
     </section>
 
+
     <!-- ================= Footer Start ================= -->
-
-    <footer class="bg-green-950 text-white mt-20">
-
+    <footer class="bg-slate-950 text-white">
         <div class="max-w-7xl mx-auto px-6 py-16">
-
             <div class="grid md:grid-cols-4 gap-10">
 
                 <!-- About -->
-
                 <div>
-
-                    <h2 class="text-2xl font-bold mb-4">
-                        Liberation War Archive
-                    </h2>
-
-                    <p class="text-gray-300 leading-7">
-                        Preserving the memories, documents,
-                        photographs and oral histories of
-                        Bangladesh's Liberation War for future
-                        generations.
-                    </p>
-
+                    <h2 class="text-2xl font-bold mb-4">Liberation War Archive</h2>
+                    <p class="text-gray-400 leading-7 text-sm">Preserving the memories, documents, photographs and oral histories of Bangladesh's Liberation War for future generations.</p>
                 </div>
 
                 <!-- Links -->
-
                 <div>
-
-                    <h3 class="font-semibold text-lg mb-5">
-                        Quick Links
-                    </h3>
-
-                    <ul class="space-y-3">
-
-                        <li><a href="index.html">Home</a></li>
-
-                        <li><a href="documents.html">Documents</a></li>
-
-                        <li><a href="interviews.html">Interviews</a></li>
-
-                        <li><a href="gallery.html">Gallery</a></li>
-
-                        <li><a href="contact.html">Contact</a></li>
-
+                    <h3 class="font-semibold text-lg mb-5">Quick Links</h3>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li><a href="index.html" class="hover:underline">Home</a></li>
+                        <li><a href="documents.html" class="hover:underline">Documents</a></li>
+                        <li><a href="interviews.html" class="hover:underline">Interviews</a></li>
+                        <li><a href="gallery.html" class="hover:underline">Gallery</a></li>
+                        <li><a href="contact.html" class="hover:underline">Contact</a></li>
                     </ul>
-
                 </div>
 
                 <!-- Contact -->
-
                 <div>
-
-                    <h3 class="font-semibold text-lg mb-5">
-                        Contact
-                    </h3>
-
-                    <div class="space-y-4">
-
-                        <div class="flex gap-3">
-
-                            <span class="material-symbols-outlined">
-                                location_on
-                            </span>
-
+                    <h3 class="font-semibold text-lg mb-5">Contact</h3>
+                    <div class="space-y-4 text-sm text-gray-300">
+                        <div class="flex gap-3 items-center">
+                            <span class="material-symbols-outlined text-amber-400">location_on</span>
                             Dhaka, Bangladesh
-
                         </div>
-
-                        <div class="flex gap-3">
-
-                            <span class="material-symbols-outlined">
-                                mail
-                            </span>
-
+                        <div class="flex gap-3 items-center">
+                            <span class="material-symbols-outlined text-amber-400">mail</span>
                             archive@gmail.com
-
                         </div>
-
-                        <div class="flex gap-3">
-
-                            <span class="material-symbols-outlined">
-                                call
-                            </span>
-
+                        <div class="flex gap-3 items-center">
+                            <span class="material-symbols-outlined text-amber-400">call</span>
                             +880 1234 567890
-
                         </div>
-
                     </div>
-
                 </div>
 
                 <!-- Social -->
-
                 <div>
-
-                    <h3 class="font-semibold text-lg mb-5">
-                        Follow Us
-                    </h3>
-
+                    <h3 class="font-semibold text-lg mb-5">Follow Us</h3>
                     <div class="flex gap-4">
-
-                        <a href="#">
-
-                            <span class="material-symbols-outlined">
-                                public
-                            </span>
-
-                        </a>
-
-                        <a href="#">
-
-                            <span class="material-symbols-outlined">
-                                photo_camera
-                            </span>
-
-                        </a>
-
-                        <a href="#">
-
-                            <span class="material-symbols-outlined">
-                                smart_display
-                            </span>
-
-                        </a>
-
+                        <a href="#" class="hover:text-amber-400"><span class="material-symbols-outlined">public</span></a>
+                        <a href="#" class="hover:text-amber-400"><span class="material-symbols-outlined">photo_camera</span></a>
+                        <a href="#" class="hover:text-amber-400"><span class="material-symbols-outlined">smart_display</span></a>
                     </div>
-
                 </div>
 
             </div>
 
-            <hr class="my-10 border-gray-700">
+            <hr class="my-10 border-slate-800">
 
-            <div class="text-center text-gray-400">
-
-                © 2026 Liberation War Archive.
-                All Rights Reserved.
-
+            <div class="text-center text-gray-500 text-sm">
+                © 2026 Liberation War Archive. All Rights Reserved.
             </div>
-
         </div>
-
     </footer>
-
     <!-- ================= Footer End ================= -->
-     <script src="js/script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
