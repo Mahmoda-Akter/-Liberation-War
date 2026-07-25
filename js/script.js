@@ -14,9 +14,7 @@ if (menuBtn && mobileMenu) {
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
-
     contactForm.addEventListener("submit", function (e) {
-
         e.preventDefault();
 
         const name = document.getElementById("name").value.trim();
@@ -24,8 +22,7 @@ if (contactForm) {
         const subject = document.getElementById("subject").value.trim();
         const message = document.getElementById("message").value.trim();
 
-        const emailPattern =
-            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (name === "") {
             alert("Please enter your full name.");
@@ -53,20 +50,6 @@ if (contactForm) {
         }
 
         alert("Your message has been submitted successfully!");
-
         contactForm.reset();
-
     });
-    const nameError = document.getElementById("nameError");
-
-    if (name === "") {
-
-        nameError.textContent = "Full name is required.";
-        nameError.classList.remove("hidden");
-        return;
-
-    }
-
-    nameError.classList.add("hidden");
-
 }
